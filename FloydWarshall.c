@@ -51,8 +51,9 @@ int main(){
 
     
     double start_time= omp_get_wtime();
-    #pragma omp parallel for num_threads(n_threads)
+
     for(int k=0; k<n; k++){
+        #pragma omp parallel for num_threads(n_threads)
         for(int i=0; i<n; i++){
             for(int j=0; j<n; j++){
 
